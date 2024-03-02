@@ -30,6 +30,10 @@ public class CustomerController {
         return ResponseEntity.ok("WELCOME");
 
     }
+    @GetMapping("/sir")
+    public ResponseEntity<String>helloSir(){
+        return ResponseEntity.ok("WELCOME TO PUNE");
+    }
 
     @GetMapping("/signin/{custEmailId}/{custPassword}")
     public ResponseEntity<Boolean> signIn(@PathVariable String custEmailId, @PathVariable String custPassword) {
