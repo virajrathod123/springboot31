@@ -25,6 +25,12 @@ public class CustomerController {
         return new ResponseEntity<>(customerServiceImpl.signUp(customer), HttpStatus.CREATED);
     }
 
+    @GetMapping("/hiii")
+    public ResponseEntity<String> sayHii() {
+        return ResponseEntity.ok("WELCOME");
+
+    }
+
     @GetMapping("/signin/{custEmailId}/{custPassword}")
     public ResponseEntity<Boolean> signIn(@PathVariable String custEmailId, @PathVariable String custPassword) {
         return ResponseEntity.ok(customerServiceImpl.signIn(custEmailId, custPassword));
